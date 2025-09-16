@@ -148,7 +148,8 @@ class CustomerController extends Controller
             return view("shop.customer.compare")->with(compact('list_category','list_brand','list_compare'));
         }
 
-        // Đăng ký tài khoản
+        // Đăng ký tài khoản//
+
         public function submit_register(Request $request){
             $data = $request->all();
             $customer = new Customer();
@@ -165,6 +166,7 @@ class CustomerController extends Controller
                 return redirect()->back()->with('message', 'Đăng ký tài khoản thành công');
             }
         }
+//**** */
 
         // Đăng nhập
         public function submit_login(Request $request){
